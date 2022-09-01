@@ -148,7 +148,7 @@ module.exports = async(conn, msg, m, setting, store) => {
 		const chats = (type === 'conversation' && msg.message.conversation) ? msg.message.conversation : (type === 'imageMessage') && msg.message.imageMessage.caption ? msg.message.imageMessage.caption : (type === 'videoMessage') && msg.message.videoMessage.caption ? msg.message.videoMessage.caption : (type === 'extendedTextMessage') && msg.message.extendedTextMessage.text ? msg.message.extendedTextMessage.text : (type === 'buttonsResponseMessage') && quotedMsg.fromMe && msg.message.buttonsResponseMessage.selectedButtonId ? msg.message.buttonsResponseMessage.selectedButtonId : (type === 'templateButtonReplyMessage') && quotedMsg.fromMe && msg.message.templateButtonReplyMessage.selectedId ? msg.message.templateButtonReplyMessage.selectedId : (type === 'messageContextInfo') ? (msg.message.buttonsResponseMessage?.selectedButtonId || msg.message.listResponseMessage?.singleSelectReply.selectedRowId) : (type == 'listResponseMessage') && quotedMsg.fromMe && msg.message.listResponseMessage.singleSelectReply.selectedRowId ? msg.message.listResponseMessage.singleSelectReply.selectedRowId : ""
                 const toJSON = j => JSON.stringify(j, null,'\t')
 		if (multi){
-		    var prefix = /^[°•π÷×¶∆£¢€¥®™✓_=|~!?#$%^&.+-,\/\\©^]/.test(chats) ? chats.match(/^[°•π÷×¶∆£¢€¥®™✓_=|~!?#$%^&.+-,\/\\©^]/gi) : '#'
+		    var prefix = /^[°•π÷×¶∆£¢€¥®™✓_=|~!?#$%^&.+-,\/\\©^]/.test(chats) ? chats.match(/^[°•π÷×¶∆£¢€¥®™✓_=|~!?#$%^&.+-,\/\\©^]/gi) : ''
         } else {
             if (nopref){
                 prefix = ''
@@ -1467,8 +1467,7 @@ fs.unlinkSync(`./database/storage/Image/${q}.jpeg`)
 					limitAdd(sender, limit)
 					break
             case prefix+'play':
-				case prefix+'yt':
-					case prefix+'youtube':
+				
 			    if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
                 if (args.length < 2) return reply(`Kirim perintah ${command} query\nContoh : ${command} monokrom`)
                 reply(mess.wait)
@@ -2136,12 +2135,14 @@ case prefix+'yts':
 case prefix+'ytsearch':
 case prefix+'youtubesearch':
 case prefix+'search':
+case prefix+'yt':
+case prefix+'youtube':
   if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
 	if (args.length < 2) return reply(`Kirim perintah ${command} judul lagunya\nExample : ${command} Dandelion`)
   var teskd = `YOUTUBE SEARCH\n\n`
   yts(q).then ( data => {
   var yte = data.videos
-	var jumlah = 20
+	var jumlah = 15
 	var list = []
 	for (let i = 0; i < jumlah; i++) {
 	list.push({
