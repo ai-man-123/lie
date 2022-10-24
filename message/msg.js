@@ -73,13 +73,13 @@ const jojoapi = "Syaa"
 const imgbbapi = "9a0aed7ae09bdf7a9d7ddeb018fed6cf"
 
 // Setting Donasi
-const gopay = "0882-1329-2687"
-const ovo = "0813-1994-4917"
-const dana = "0813-1994-4917"
-const pulsa = "0813-1994-4917"
-const pulsa2 = "0882-1329-2687"
-const ig = "arsrfii"
-const github = "GetSya"
+const gopay = "-"
+const ovo = "-"
+const dana = "-"
+const pulsa = "-"
+const pulsa2 = "-"
+const ig = "aiman1_23"
+const github = "ai-man-123"
 
 // Exif
 const Exif = require("../lib/exif")
@@ -106,7 +106,7 @@ let prefa = '#'
 
 // Rndm
 let mode = 'public'
-let own2 = '6281319944917@s.whatsapp.net'
+let own2 = '601120787061@s.whatsapp.net'
 let autoyt = true
 
 // Type Menu
@@ -183,7 +183,7 @@ module.exports = async(conn, msg, m, setting, store) => {
 		const isAntiLink = isGroup ? antilink.includes(from) : false
 		const gcounti = setting.gcount
 		const gcount = isPremium ? gcounti.prem : gcounti.user
-		const piw = `❋─────────────────❋\n            *✘ JOJO - BOT ✘*\n❋─────────────────❋`
+		const piw = `❋─────────────────❋\n            *✘ lynx - BOT ✘*\n❋─────────────────❋`
 
     const fgclink = {key: {participant: "0@s.whatsapp.net","remoteJid": "0@s.whatsapp.net"},"message": {"groupInviteMessage": {"groupJid": "41798898139-1429460331@g.us","inviteCode": "m","groupName": "Jojo Lovers", "caption": `© ${pushname}`, 'jpegThumbnail': fs.readFileSync(setting.pathimg)}}}
     const fvideo = {key: { fromMe: false,participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "41798898139-1429460331@g.us" } : {}) },message: { "videoMessage": { "title":`*AUTO DOWNLOAD AUDIO YOUTUBE*`, "h": `Hmm`,'seconds': '10000000⁰0', 'caption': `*AUTO DOWNLOAD AUDIO YOUTUBE*`, 'jpegThumbnail': fs.readFileSync(setting.pathimg)}}}
@@ -430,8 +430,8 @@ module.exports = async(conn, msg, m, setting, store) => {
 		}
 		//{ callButton: { displayText: `Call Owner!`, phoneNumber: `+${ownerNumber}` } },
 		const buttonsDefault = [
-			{ urlButton: { displayText: `🏹 GRUP WHATSAPP 🎯`, url : gcwa } },
-			{ urlButton: { displayText: `👤 OWNER BOT 👤`, url : `https://wa.me/6281319944917?text=Hai+kak+aku+mau+beli+PREMIUM` } },
+			{ urlButton: { displayText: `🏹 PING 🎯`, url : ping } },
+			{ urlButton: { displayText: `👤 OWNER BOT 👤`, url : `https://wa.me/60102810046?text=Hai+bang Hensem+aku+mau+beli+PREMIUM` } },
 			{ quickReplyButton: { displayText: `Rate Bot ⭐`, id: `${prefix}getrating` } },
 			{ quickReplyButton: { displayText: `List Menu 📑`, id: `${prefix}allmenu` } },
 		  { quickReplyButton: { displayText: `Login 👥`, id: `${prefix}login` } },
@@ -725,7 +725,7 @@ if (chats.startsWith("fetch ")) {
 			case prefix+'help':
 			  case prefix+'m':
 			    case prefix+'start':
-var menunya = `╔═⧎ *${botName}* ⧎═\n║\n╠═⧎ Hallo *${pushname}*\n║\n╠═⧎ Aku Adalah *${botName}* \n║ Silahkan Pilih List Menu\n║ Untuk Melihat Daftar Menu.\n║ Dan Pilih Rating Bot\n║ Untuk Rating Bot ${botName}\n║\n╠═⧎ *Harap Login Terlebih*\n║ *Dahulu Sebelum Memulai Bot* \n║ *JOJO Untuk Mendapatkan* \n║ *Limit Dan Balance!*\n║\n╚═⧎ Thanks For Using ${botName}\n❋─────────────────❋\n\n「 *${tgl}* 」\n「 *${jam}* 」 `
+var menunya = `╔═⧎ *${botName}* ⧎═\n║\n╠═⧎ Hallo *${pushname}*\n║\n╠═⧎ Aku Adalah *${botName}* \n║ Silahkan Pilih List Menu\n║ Untuk Melihat Daftar Menu.\n║ Dan Pilih Rating Bot\n║ Untuk Rating Bot ${botName}\n║\n╠═⧎ *Harap Login Terlebih*\n║ *Dahulu Sebelum Memulai Bot* \n║ *lynx Untuk Mendapatkan* \n║ *Limit Dan Balance!*\n║\n╚═⧎ Thanks For Using ${botName}\n❋─────────────────❋\n\n「 *${tgl}* 」\n「 *${jam}* 」 `
 			    addCountCmd('#menu', sender, _cmd)
 if (typemenu === 'button') {
 			    conn.sendMessage(from, { caption: menunya, image: fs.readFileSync(setting.pathimg), buttons: buttonsDefa, footer: botName, mentions: [sender]}, { quoted: msg })
@@ -744,7 +744,7 @@ if (typemenu === 'image') {
 if (typemenu === 'sections') {
   var sections = [
     {
-	title: "MENU JOJO",
+	title: "MENU lynxbot by Aiman",
 	rows: [
 	    {title: `1. Generator Menu 🧬`, rowId: `${prefix}generatormenu`},
 	    {title: `2. Downloader Menu ⬇️`, rowId: `${prefix}downloadermenu`},
@@ -768,7 +768,7 @@ if (typemenu === 'sections') {
 	  {title: `1. All Menu`, rowId: `${prefix}allmenu`, description: `Menampilkan Seluruh Menu`},
 	  {title: `2. Login`, rowId: `${prefix}login`, description: `Jangan Lupa Login Hari Ini!`},
 	  {title: `3. Rate Bot`, rowId: `${prefix}getrating`, description: `Bantu Rating Bot`},
-	  {title: `4. Nomor Owner`, rowId: `${prefix}owner`, description: `Admin Dari JojoBot`}
+	  {title: `4. Nomor Owner`, rowId: `${prefix}owner`, description: `Admin Dari lynxBot`}
   ]},
     {
 	title: "Social Media",
@@ -780,9 +780,9 @@ if (typemenu === 'sections') {
 ]
 var listMessage = {
   text: menunya,
-  footer: "Follow My Instagram :\nhttps://instagram.com/arsrfii",
+  footer: "Follow My Instagram :\nhttps://instagram.com/aiman1_23",
   title: "❋─────────────────❋",
-  buttonText: "JOJO",
+  buttonText: "lynx",
   sections
 }
 }
@@ -942,8 +942,8 @@ var teks = `  │
   ├─ ❏ ${ovo}
   ├─ ❏ DANA
   ├─ ❏ ${dana}
-  ├─ ❏ SHOPEE PAY
-  ├─ ❏ 0882-1329-2687
+  ├─ ❏ digi
+  ├─ ❏ 00102810046
   ├─ ❏ INSTAGRAM
   └─ ❏ https://www.instagram.com/${ig}
   
@@ -967,10 +967,7 @@ Keuntungan:
 - Add Ke Grup
 
 Via :
-- Ovo (088213292687)
-- Gopay (088213292687)
-- Dana (081319944917)
-- Spay (088213292687)
+-digi (0102810046)
 
 ~ Tim ${botName}
 ${readmore}
@@ -1007,6 +1004,7 @@ Haii @${sender.split("@")[0]}, aku adalah *${botName}*, Yang bisa membantu anda 
 ===================
 Thanks To
 - Riyan
+- Aiman
 - Arasya
 - Amel
 - Hardianto
@@ -1976,7 +1974,7 @@ case prefix+'tagme':
   case prefix+'tag':
     mentions(`Woy @` + sender.split("@")[0], [sender], msg)
     break
-case prefix+'jo':
+case prefix+'lynx':
   case prefix+'simi':
  var text = `${q}`
 var cimcimi = await fetchJson(`https://api.simsimi.net/v2/?text=${text}&lc=id`)
