@@ -10,7 +10,7 @@ const { getLimit, getBalance, cekGLimit } = require("../lib/limit")
 
 const more = String.fromCharCode(8206)
 const readmore = more.repeat(4001)
-const viewsmenu = `❋─────────────────❋\n            *✘ JOJO - BOT ✘*\n❋─────────────────❋`
+const viewsmenu = `❋─────────────────❋\n            *✘ lynx- BOT ✘*\n❋─────────────────❋`
 function toCommas(x) {
 	x = x.toString()
 	var pattern = /(-?\d+)(\d{3})/;
@@ -25,7 +25,7 @@ exports.allmenu = (sender, prefix, pushname, isOwner, isPremium, balance, limit,
 Tanggal : ${moment.tz('Asia/Jakarta').format('DD/MM/YY')}
 Waktu : ${moment.tz('Asia/Jakarta').format('HH:mm:ss')} WIB
 
-_Ada Bug? Ketik ${prefix}report Bug mu_
+_Ada Bug/erorr? Ketik ${prefix}report Bug mu ke owner lynx_
 ${readmore}
 *( 📍 )  Generator Menu*
 ≻ ${prefix}menu
@@ -460,6 +460,6 @@ $ executor
 ≻ ${prefix}unblock
 ≻ ${prefix}getmenu <text|image|buttons5|button>
 ≻ ${prefix}setprefix <multi/nopref>
-≻ ${prefix}setowner <628XXX>
+≻ ${prefix}setowner <601XXX>
 ≻ ${prefix}creategroup`
 }
